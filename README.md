@@ -1,6 +1,8 @@
 # cybersecu-app
 App for my cyber security class
-# Goal
-API Node pour gérer des albums de musique
+# Purpose
+Node API allowing musicians to upload albums
+# Stack
+Node.JS with Express.JS and MongoDB
 # Author
 Louis DUTOIT
