@@ -15,6 +15,6 @@ RUN npm install
 COPY . .
 
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+CMD [ "node", "app.js" ]
 
 #docker run -p 49160:8080 -d dutoitlouis/cybersecu-app
