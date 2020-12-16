@@ -1,24 +1,25 @@
 {
-  "name": "cybersecu-app",
+  "name": "y",
   "version": "1.0.0",
-  "description": "App for my cyber security class",
+  "description": "API for cybersecurity class",
   "main": "server.js",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/louisdtt/cybersecu-app.git"
   },
-  "author": "",
+  "keywords": [
+    "Node"
+  ],
+  "author": "louisdtt",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/louisdtt/cybersecu-app/issues"
   },
-  "homepage": "https://github.com/louisdtt/cybersecu-app#readme"
+  "homepage": "https://github.com/louisdtt/cybersecu-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
