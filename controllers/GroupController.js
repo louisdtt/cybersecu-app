@@ -25,7 +25,7 @@ exports.createNewGroup = (req, res) => {
 
 // Read a particular group by _id
 
-exports.readGroup = (req, body) => {
+exports.readGroup = (req, res) => {
   Group.findById(req.params.groupid, (err, group) => {
     if (err) {
       res.status(500).send(err);
