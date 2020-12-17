@@ -4,6 +4,10 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const AlbumSchema = new Schema({
+  _id: {
+    type: String,
+    required: true
+  },
   title: {
     type: String,
     required: true
@@ -19,7 +23,11 @@ const AlbumSchema = new Schema({
   cover: {
     type: String,
     required: true
-  }
+  },
+  groupID: {
+    type: String,
+    required: true
+  },
 });
 
 module.exports = mongoose.model("Albums", AlbumSchema);

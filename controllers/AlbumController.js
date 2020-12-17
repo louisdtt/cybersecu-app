@@ -25,7 +25,7 @@ exports.createNewAlbum = (req, res) => {
 
 // Read a particular album by _id
 
-exports.readAlbum = (req, body) => {
+exports.readAlbum = (req, res) => {
   Album.findById(req.params.albumid, (err, album) => {
     if (err) {
       res.status(500).send(err);
@@ -53,7 +53,7 @@ exports.updateAlbum = (req, res) => {
 // Delete a particular album by _id 
 
 exports.deleteAlbum = (req, res) => {
-  Album.remove({ _id: req.params.albumid }, (err, album) => {
+  Album.deleteOne({ _id: req.params.albumid }, (err, album) => {
     if (err) {
       res.status(404).send(err);
     }
