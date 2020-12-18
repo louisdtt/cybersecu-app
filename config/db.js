@@ -14,7 +14,8 @@ const options = {
     poolSize: 10,
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 };
   
 // Connect to remote database

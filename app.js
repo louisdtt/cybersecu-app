@@ -1,10 +1,6 @@
 const express = require('express');
 const bodyParser = require("body-parser");
 
-// Controllers checking
-const AlbumController = require("./controllers/AlbumController");
-const GroupController = require("./controllers/GroupController");
-
 // DB instance connection
 require("./config/db");
 
@@ -19,35 +15,10 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
-// API Endpoints for albums
-
-app
-  .route("/albums")
-  .get(AlbumController.listAllAlbums)
-  .post(AlbumController.createNewAlbum);
-
-app
-  .route("/albums/:albumid")
-  .get(AlbumController.readAlbum)
-  .put(AlbumController.updateAlbum)
-  .delete(AlbumController.deleteAlbum);
-
-// API Endpoints for groups
-
-app
-  .route("/groups")
-  .get(GroupController.listAllGroups)
-  .post(GroupController.createNewGroup);
-
-app
-  .route("/groups/:groupid")
-  .get(GroupController.readGroup)
-  .put(GroupController.updateGroup)
-  .delete(GroupController.deleteGroup);
-
+// API routes
+require('./routes/AlbumRoutes')(app);
+require('./routes/GroupRoutes')(app);
 
 // Starting the app
-
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
