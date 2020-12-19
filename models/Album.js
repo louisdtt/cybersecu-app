@@ -20,7 +20,7 @@ const AlbumSchema = new Schema({
     type: String,
     required: true
   },
-  groupID: {
+  group_ID: {
     type: Schema.Types.ObjectId, ref: 'Groups',
     required: true
   },

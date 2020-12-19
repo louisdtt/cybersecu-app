@@ -16,6 +16,6 @@ module.exports = function(app) {
      .delete(AlbumController.deleteAlbum);
 
      app
-     .get('/albums/groups/:groupsId', AlbumController.findByGroupId);
+     .get('/albums/groups/:groupId', AlbumController.findByGroupId);
 
 }

@@ -64,19 +64,19 @@ exports.deleteAlbum = (req, res) => {
 // Find all albums by a group ID
 
 exports.findByGroupId = (req, res) => {
-  Album.find({ group : req.params.groupId })
-  .exec(function (err, albums) {
-    if (err){
-      if(err.kind === 'ObjectId') {
-        return res.status(404).send({
-          message: "Albums not found with given group Id " + req.params.groupId
-        });                
+    Album.find({ group_ID : req.params.groupId })
+    .exec(function (err, albums) {
+      if (err){
+        if(err.kind === 'ObjectId') {
+          return res.status(404).send({
+            message: "Albums not found with given group Id " + req.params.groupId
+          });                
+        }
+        return res.status(500).send({
+          message: "Error retrieving Albums with given group Id " + req.params.groupId
+        });
       }
-      return res.status(500).send({
-        message: "Error retrieving Albums with given group Id " + req.params.groupId
-      });
-    }
-        
-  res.send(albums);
-});
+          
+      res.status(200).json(albums);
+  });
 };
