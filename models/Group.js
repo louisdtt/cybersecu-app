@@ -8,10 +8,14 @@ const GroupSchema = new Schema({
     type: String,
     required: true
   },
-  members: {
+  style: {
     type: String,
     required: true
-  }
+  },
+  members: [{
+    type: String,
+    required: true
+  }]
 });
 
 module.exports = mongoose.model("Groups", GroupSchema);

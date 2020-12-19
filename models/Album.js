@@ -8,18 +8,14 @@ const AlbumSchema = new Schema({
     type: String,
     required: true
   },
-  musicList: {
-    type: String,
-    required: true
-  },
   releaseYear: {
     type: Number,
     required: true
   },
-  cover: {
+  musicList: [{
     type: String,
     required: true
-  },
+  }],
   group_ID: {
     type: Schema.Types.ObjectId, ref: 'Groups',
     required: true
