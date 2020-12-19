@@ -4,10 +4,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const AlbumSchema = new Schema({
-  _id: {
-    type: String,
-    required: true
-  },
   title: {
     type: String,
     required: true
@@ -25,7 +21,7 @@ const AlbumSchema = new Schema({
     required: true
   },
   groupID: {
-    type: String,
+    type: Schema.Types.ObjectId, ref: 'Groups',
     required: true
   },
 });
