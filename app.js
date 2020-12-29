@@ -6,7 +6,6 @@ require("./config/db");
 
 // Constants for URL
 const PORT = 8080;
-const HOST = 'localhost';
 
 // App initialization
 const app = express();
@@ -20,5 +19,4 @@ require('./routes/AlbumRoutes')(app);
 require('./routes/GroupRoutes')(app);
 
 // Starting the app
-app.listen(PORT, HOST);
-console.log(`Running on http://${HOST}:${PORT}`);
+app.listen(PORT);
