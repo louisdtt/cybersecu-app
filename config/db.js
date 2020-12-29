@@ -33,4 +33,3 @@ mongoose.connect(dbURI, options).then(
 
 require("../models/Album");
 require("../models/Group");
-require("../models/User");
