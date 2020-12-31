@@ -8,7 +8,7 @@ Run the commands :
 
 The app is now running on http://localhost:4040/
 # Test
-Import the `API_test.json` in Insomnia/Postman or alike, every API route is called in it
+Import the `tests/API_test.json` in Insomnia/Postman or alike, every API route is called in it
 # Security
 Attack surface :  
 
@@ -20,13 +20,13 @@ Schema :
 
 Objectives : 
 
-Confidentialité : L'accés à la base de données est protégé au travers d'une URL de connexion placé en variable d'environnement
+Confidentialité : L'accés à la base de données est protégé au travers d'une URL de connexion placé en variable d'environnement (4/5)
 
-Intégrité : Toute personne utilisant l'API a accés à l'intégralité des données et peut donc les modifier et les supprimer
+Intégrité : Toute personne utilisant l'API a accés à l'intégralité des données et peut donc les modifier et les supprimer (0/5)
 
-Disponiblité : Les données sont stockées en utilisant le service cloud de MongoDB (Atlas), elles sont répliquées sur trois nodes pour assurer une disponibilité maximale
+Disponiblité : Les données sont stockées en utilisant le service cloud de MongoDB (Atlas), elles sont répliquées sur trois nodes pour assurer une disponibilité maximale (5/5)
 
-Traçabilité : Toute modification apparait dans les logs de MongoDB
+Traçabilité : Toute modification apparait dans les logs de MongoDB (5/5)
 
 # Stack
 Node.JS with Express.JS and MongoDB
