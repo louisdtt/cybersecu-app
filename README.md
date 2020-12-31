@@ -24,7 +24,7 @@ Confidentialité : L'accés à la base de données est protégé au travers d'un
 
 Intégrité : Toute personne utilisant l'API a accés à l'intégralité des données et peut donc les modifier et les supprimer
 
-Disponiblité : Les données sont stockées en utilisant le service cloud de MongoDB (Atlas), elles sont répliquées sur trois nodes pour assurer une disponiblité maximum
+Disponiblité : Les données sont stockées en utilisant le service cloud de MongoDB (Atlas), elles sont répliquées sur trois nodes pour assurer une disponiblité maximale
 
 Traçabilité : Toute modification apparait dans les logs de MongoDB
 
