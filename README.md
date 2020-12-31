@@ -11,7 +11,10 @@ The app is now running on http://localhost:4040/
 Import the `API_test.json` in Insomnia/Postman or alike, every API route is called in it
 # Security
 Attack surface :  
-Objectives :
+![](./assets/attack_surface.png)  
+![](./assets/mermaid.png)  
+
+Objectives : 
 # Stack
 Node.JS with Express.JS and MongoDB
 # Author
