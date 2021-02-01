@@ -10,7 +10,7 @@ The app is now running on http://localhost:4040/
 # Test
 Import the `tests/API_test.json` in Insomnia/Postman or alike, every API route is called in it
 # Analysis
-- On utilise [Mongoose](https://www.npmjs.com/package/mongoose) pour gérer la connection avec la BDD
+- On utilise [Mongoose](https://www.npmjs.com/package/mongoose) pour gérer la connection avec la BDD.
 
 - Les schemas [Mongoose](https://www.npmjs.com/package/mongoose) utilisés dans le dossier `/models` permettent d'imposer le type des éléments envoyés dans la base de données, cela mitige les injections mais selon le type envoyé il peut aussi être bon d'ajouter une bibliothèque comme [mongo-sanitize](https://www.npmjs.com/package/mongo-sanitize) pour permettre d'échapper tous les caractères d'instructions de MongoDB, pour tester cela on peut simplement essayer d'envoyer des requêtes malveillantes sur des tables de test et observer le résultat.
 
