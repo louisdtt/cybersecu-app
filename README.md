@@ -29,13 +29,14 @@ Schema :
 
 Objectives : 
 
-Confidentialité : L'accés à la base de données est protégé au travers d'une URL de connexion placé en variable d'environnement (4/5)
+Confidentialité : Une fuite de données n'est pas très grave dans ce cas, sauf si l'album posté est censé rester secret, il n'y a pas de données personnelles stockées dans la base. (1/5)
 
-Intégrité : Toute personne utilisant l'API a accés à l'intégralité des données et peut donc les modifier et les supprimer (0/5)
+Intégrité : Les données sont sauvegardées périodiquement, si elles sont modifiées on pourra donc les restaurer mais si la sauvegarde est trop ancienne on peut perdre certaines données. (1/5)
 
-Disponiblité : Les données sont stockées en utilisant le service cloud de MongoDB (Atlas), elles sont répliquées sur trois nodes pour assurer une disponibilité maximale (4/5)
+Disponiblité : Le service proposé par l'API n'est pas un service essentiel, sa coupure n'aura pas un énorme impact, sauf pour les quelques personnes mécontentes qui essaieront de l'utiliser, de plus les données sont stockées en utilisant le service cloud de MongoDB (Atlas), elles sont répliquées sur trois nodes pour assurer une disponibilité maximale (1/5)
 
-Traçabilité : Toute modification apparait dans les logs de MongoDB (5/5)
+Traçabilité : Les données n'étant pas essentielles, savoir d'où viennent les appels API n'est pas primordial, les logs sont tout de même stockés dans MongoDB. (1/5)
+
 
 # Stack
 Node.JS with Express.JS and MongoDB
