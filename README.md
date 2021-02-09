@@ -28,6 +28,8 @@ Import the `tests/API_test.json` in Insomnia/Postman or alike, every API route i
 
 - Pour les dépendances `npm audit` permet de vérifier toutes les dépendances du projet et de rechercher les vulnérabilités connues, il y a aussi `Depandabot` sur le repo pour surveiller les dépendances et proposer des mises à jour automatiques.
 
+- On utilise le protocole HTTP sur le site, il serait mieux d'utiliser HTTPS pour sécuriser les communications avec une couche de chiffrement, pour cela il faut un certificat d'authentification, notamment émis par [Let's encrypt](https://letsencrypt.org/).
+
 - Il n'y a pas de systèmes de gestion de comptes, mais un système comme OAuth 2.0 serait à privilégier pour avoir un bon niveau de sécuritié.
 
 # Security
